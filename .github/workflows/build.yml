@@ -8,6 +8,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
       
+      - name: Setup Visual Studio
+        uses: ilammy/msvc-dev-cmd@v1
+        with:
+          arch: x64
+      
       - name: Compile my program
         run: cl main.cpp
       
